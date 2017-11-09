@@ -11,26 +11,22 @@ import javax.persistence.*;
  * @author Godzsák Dávid <godzsakdavid@gmail.com>
  */
 @Entity
-@Table(name = "Product")
+@Table(name = "Quantity")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public class Storage extends BaseEntity {
+public class Quantity extends BaseEntity {
 
     //@Column(nullable = false, unique = true)
     //private int id;
     
-    
-    @Column(nullable = false)
-    private String name;
+    @OneToOne
+    @JoinColumn(name="id",table="Product")
+    private int id;
 
     @Column(nullable = false)
-    private String size;
+    private String quantity;
     
-    @Column(nullable = false)
-    private String color;
-
-    @Column(nullable = false)
-    private int price;
+    
 }
