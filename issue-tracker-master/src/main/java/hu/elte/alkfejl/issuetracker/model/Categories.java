@@ -11,30 +11,24 @@ import javax.persistence.*;
  * @author Godzsák Dávid <godzsakdavid@gmail.com>
  */
 @Entity
-@Table(name = "deletemelater")
+@Table(name = "Categories")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 //@EqualsAndHashCode(callSuper = true)
-public class Storage /*extends BaseEntity*/ {
+public class Categories /*extends BaseEntity*/ {
 
     //@Column(nullable = false, unique = true)
     //private int id;
     
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    //@OneToOne(mappedBy="product")
     private int id;
-    
-    @Column(nullable = false)
-    private String name;
+    /*
+    @OneToOne
+    @JoinColumn(name="product_id")
+    private Storage id;*/
 
     @Column(nullable = false)
-    private String size;
-    
-    @Column(nullable = false)
-    private String color;
-
-    @Column(nullable = false)
-    private int price;
+    private String categories;
 }

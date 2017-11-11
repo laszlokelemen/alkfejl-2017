@@ -14,35 +14,55 @@ import java.util.List;
  * @author Godzsák Dávid <godzsakdavid@gmail.com>
  */
 @Entity
-@Table(name = "ISSUES")
+@Table(name = "Products")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(callSuper = true)
-public class Issue extends BaseEntity {
+//@EqualsAndHashCode(callSuper = true)
+public class Issue /*extends BaseEntity*/ {
 
     @JoinColumn
     @ManyToOne(targetEntity = User.class)
     private User user;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int id;
+    
     @Column(nullable = false)
     private Timestamp timestamp;
 
+    
+
+        
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
+    private String size;
+    
+    @Column(nullable = false)
+    private String color;
+
+    @Column(nullable = false)
+    private int price;
+    
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Status status;
-
+    
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String location;
+    private Category category;
 
-    @Column(nullable = false)
-    private String description;
-
-    @JoinColumn
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, targetEntity = IssueMessage.class)
-    private List<IssueMessage> messages;
-
+//    @JoinColumn
+//    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, targetEntity = IssueMessage.class)
+//    private List<IssueMessage> messages;
+    
     public enum Status {
         ADDED, READY, ONGOING
+    }
+    public enum Category {
+        PANTRY, CUTLERY, FLASK, DISH
     }
 }
