@@ -15,12 +15,16 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@EqualsAndHashCode(callSuper = true)
-public class Storage extends BaseEntity {
+//@EqualsAndHashCode(callSuper = true)
+public class Storage /*extends BaseEntity*/ {
 
     //@Column(nullable = false, unique = true)
     //private int id;
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    //@OneToOne(mappedBy="product")
+    private int id;
     
     @Column(nullable = false)
     private String name;
