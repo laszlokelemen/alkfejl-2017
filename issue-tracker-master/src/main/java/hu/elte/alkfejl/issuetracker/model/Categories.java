@@ -1,5 +1,6 @@
 package hu.elte.alkfejl.issuetracker.model;
 
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -18,9 +19,6 @@ import javax.persistence.*;
 //@EqualsAndHashCode(callSuper = true)
 public class Categories /*extends BaseEntity*/ {
 
-    //@Column(nullable = false, unique = true)
-    //private int id;
-    
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
@@ -30,5 +28,21 @@ public class Categories /*extends BaseEntity*/ {
     private Storage id;*/
 
     @Column(nullable = false)
-    private String categories;
+    private String name;
+    
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "product_category",
+            joinColumns = @JoinColumn(name = "category_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "product_id", referencedColumnName = "id"))
+    private List<Storage> product;
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
 }

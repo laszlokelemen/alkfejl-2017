@@ -23,12 +23,28 @@ public class Quantity /*extends BaseEntity*/ {
     
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int id2;
+    private int id;
     /*
     @OneToOne
     @JoinColumn(name="product_id")
     private Storage id;*/
 
     @Column(nullable = false)
-    private String quantity;
+    private int quantity;
+    
+    @Column(nullable = false)
+    private String comment;
+    
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private Storage product;
+    
+    
+    @ManyToOne
+    @JoinColumn(name = "depository_id")
+    private Depository depository;
+    
+    
+    
+    
 }

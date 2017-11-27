@@ -14,7 +14,7 @@ import java.util.List;
  * @author Godzsák Dávid <godzsakdavid@gmail.com>
  */
 @Entity
-@Table(name = "Products")
+@Table(name = "-")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
