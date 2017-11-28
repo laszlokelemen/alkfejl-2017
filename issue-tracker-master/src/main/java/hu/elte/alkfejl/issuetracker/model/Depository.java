@@ -17,14 +17,9 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 //@EqualsAndHashCode(callSuper = true)
-public class Depository /*extends BaseEntity*/ {
+public class Depository extends BaseEntity{
 
-    //@Column(nullable = false, unique = true)
-    //private int id;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int id;
+
     /*
     @OneToOne
     @JoinColumn(name="product_id")
@@ -32,6 +27,14 @@ public class Depository /*extends BaseEntity*/ {
 
     @Column(nullable = false)
     private String address;
+    
+    public String getAddress() {
+            return address;
+    }
+
+    public void setAddress(String address) {
+            this.address = address;
+    }
     
     @OneToMany(mappedBy="depository", cascade={CascadeType.ALL})
     private List<Quantity> quantity;

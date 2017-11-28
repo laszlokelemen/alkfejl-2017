@@ -16,18 +16,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 //@EqualsAndHashCode(callSuper = true)
-public class Quantity /*extends BaseEntity*/ {
-
-    //@Column(nullable = false, unique = true)
-    //private int id;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int id;
-    /*
-    @OneToOne
-    @JoinColumn(name="product_id")
-    private Storage id;*/
+public class Quantity extends BaseEntity {
 
     @Column(nullable = false)
     private int quantity;

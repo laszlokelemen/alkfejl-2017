@@ -17,15 +17,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 //@EqualsAndHashCode(callSuper = true)
-public class Categories /*extends BaseEntity*/ {
+public class Categories extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int id;
-    /*
-    @OneToOne
-    @JoinColumn(name="product_id")
-    private Storage id;*/
 
     @Column(nullable = false)
     private String name;

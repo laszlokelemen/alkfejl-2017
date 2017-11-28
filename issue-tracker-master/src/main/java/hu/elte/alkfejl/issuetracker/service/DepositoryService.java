@@ -1,7 +1,8 @@
 package hu.elte.alkfejl.issuetracker.service;
 
 import hu.elte.alkfejl.issuetracker.model.Categories;
-import hu.elte.alkfejl.issuetracker.repository.CategoryRepository;
+import hu.elte.alkfejl.issuetracker.model.Depository;
+import hu.elte.alkfejl.issuetracker.repository.DepositoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,34 +14,34 @@ import java.util.Collections;
  * @author Godzsák Dávid <godzsakdavid@gmail.com>
  */
 @Service
-public class CategoryService {
+public class DepositoryService {
 
     @Autowired
-    private CategoryRepository categoriesRepository;
+    private DepositoryRepository depositoryRepository;
 
-    public Iterable<Categories> products() {
-        return categoriesRepository.findAll();
+    public Iterable<Depository> products() {
+        return depositoryRepository.findAll();
     }
 
 
-    public Categories create(Categories category) {
-        if(categoriesRepository.findByName(category.getName()).isPresent()){
+    public Depository create(Depository depository) {
+        if(depositoryRepository.findByAddress(depository.getAddress()).isPresent()){
             //
         }
-        return categoriesRepository.save(category);
+        return depositoryRepository.save(depository);
     }
     
-    public Categories update(Categories category) {
-        return categoriesRepository.save(category);
+    public Depository update(Depository depository) {
+        return depositoryRepository.save(depository);
     }
 
 
     public void delete(int id) {
-        categoriesRepository.delete(id);
+        depositoryRepository.delete(id);
     }
 
-    public Categories read(int id) {
-        return categoriesRepository.findOne(id);
+    public Depository read(int id) {
+        return depositoryRepository.findOne(id);
     }
 
    /* public void addMessage(int id, IssueMessage message) {
