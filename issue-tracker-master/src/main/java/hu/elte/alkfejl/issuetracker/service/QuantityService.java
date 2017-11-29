@@ -1,8 +1,10 @@
 package hu.elte.alkfejl.issuetracker.service;
 
 import hu.elte.alkfejl.issuetracker.model.Depository;
+import hu.elte.alkfejl.issuetracker.model.Quantity;
 import hu.elte.alkfejl.issuetracker.model.Storage;
 import hu.elte.alkfejl.issuetracker.model.User;
+import hu.elte.alkfejl.issuetracker.repository.QuantityRepository;
 import hu.elte.alkfejl.issuetracker.repository.StorageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,33 +17,43 @@ import java.util.Collections;
  * @author Godzsák Dávid <godzsakdavid@gmail.com>
  */
 @Service
-public class StorageService {
+public class QuantityService {
 
     @Autowired
-    private StorageRepository storageRepository;
+    private QuantityRepository quantityRepository;
 
-    public Iterable<Storage> findAll() {
-        return storageRepository.findAll();
+    public Iterable<Quantity> findAll() {
+        return quantityRepository.findAll();
     }
 
 
-    public Storage create(Storage product) {
+    public Quantity create(Quantity quantity) {
         //category check
         
-        return storageRepository.save(product);
+        return quantityRepository.save(quantity);
     }
     
-    public Storage update(Storage product) {
-        return storageRepository.save(product);
+    public Quantity update(Quantity quantity) {
+        return quantityRepository.save(quantity);
     }
 
 
+    public Quantity add(Quantity quantity,int number){
+        quantity.renewal(number);
+        return quantityRepository.save(quantity);
+    }
+    
+    public Quantity subtract(Quantity quantity,int number){
+        quantity.sold(number);
+        return quantityRepository.save(quantity);
+    }
+    
     public void delete(int id) {
-        storageRepository.delete(id);
+        quantityRepository.delete(id);
     }
 
-    public Storage read(int id) {
-        return storageRepository.findOne(id);
+    public Quantity read(int id) {
+        return quantityRepository.findOne(id);
     }
 
    /* public void addMessage(int id, IssueMessage message) {

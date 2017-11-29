@@ -34,6 +34,12 @@ public class Quantity extends BaseEntity {
     private Depository depository;
     
     
+    public void sold(int number){
+        this.quantity-=number;
+    }
     
+    public void renewal(int number){
+        this.quantity+=number;
+    }
     
 }
