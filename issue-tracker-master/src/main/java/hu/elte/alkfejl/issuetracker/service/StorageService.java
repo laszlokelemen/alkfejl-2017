@@ -31,7 +31,8 @@ public class StorageService {
         return storageRepository.save(product);
     }
     
-    public Storage update(Storage product) {
+    public Storage update(int id, Storage product) {
+        //filter by id
         return storageRepository.save(product);
     }
 

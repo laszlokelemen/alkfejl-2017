@@ -12,6 +12,6 @@ import java.util.List;
  */
 @Repository
 public interface StorageRepository extends CrudRepository<Storage, Integer> {
-    //List<Storage> findAllByDepo(Depository depository);
+    List<Storage> findAll();
     //List<Storage> findAll(Depository depository);
 }

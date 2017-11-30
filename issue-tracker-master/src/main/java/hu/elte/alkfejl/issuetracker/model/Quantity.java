@@ -42,4 +42,8 @@ public class Quantity extends BaseEntity {
         this.quantity+=number;
     }
     
+    
+    public void comment(String comment){
+        this.comment=comment;
+    }
 }

@@ -33,6 +33,11 @@ public class QuantityService {
         return quantityRepository.save(quantity);
     }
     
+    public Quantity addComment(Quantity quantity, String comment) {
+        quantity.comment(comment);
+        return quantityRepository.save(quantity);
+    }
+    
     public Quantity update(Quantity quantity) {
         return quantityRepository.save(quantity);
     }
