@@ -19,7 +19,7 @@ public class DepositoryService {
     @Autowired
     private DepositoryRepository depositoryRepository;
 
-    public Iterable<Depository> products() {
+    public Iterable<Depository> findAll() {
         return depositoryRepository.findAll();
     }
 

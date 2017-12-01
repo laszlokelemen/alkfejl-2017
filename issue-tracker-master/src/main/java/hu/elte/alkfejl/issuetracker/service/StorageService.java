@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Collections;
+import java.util.Optional;
 
 /**
  * @author Godzsák Dávid <godzsakdavid@gmail.com>
@@ -31,8 +32,12 @@ public class StorageService {
         return storageRepository.save(product);
     }
     
+    public Optional<Storage> findById(int id) {
+        return Optional.of(storageRepository.findOne(id));
+    }
+    
     public Storage update(int id, Storage product) {
-        //filter by id
+        //id filter?
         return storageRepository.save(product);
     }
 
