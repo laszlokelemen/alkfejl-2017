@@ -10,7 +10,7 @@ import {StorageService} from '../../../services/storage.service';
   templateUrl: './storage-list.component.html',
   styleUrls: ['./storage-list.component.css']
 })
-export class IssueListComponent {
+export class StorageListComponent {
   displayedColumns: String[] = ['name', 'color', 'size', 'price', 'edit'];
   issues: DataSource<any> = new StorageDataSource(this.storageService);
 
@@ -37,7 +37,7 @@ export class StorageDataSource extends DataSource<any> {
   }
 
   connect(): Observable<Storage[]> {
-    return this.storageService.getIssues();
+    return this.storageService.getStorage();
   }
 
   disconnect() {
