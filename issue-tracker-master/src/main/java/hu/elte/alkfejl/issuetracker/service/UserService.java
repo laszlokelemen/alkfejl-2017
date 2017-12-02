@@ -7,6 +7,7 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
+import java.util.concurrent.ThreadLocalRandom;
 
 import static hu.elte.alkfejl.issuetracker.model.User.Role.USER;
 
