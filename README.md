@@ -4,15 +4,11 @@ Alkalmazások fejlesztése beadandó - Magic Storage
 A projektünk célja, hogy létrehozzunk egy virtuális raktárt.
 
 ### Funkcionális követelmények:
-+ **Vendégként** szeretnék a filmek között szabadon böngészni.
-+ **Vendégként** szeretném egy film adatait, leírását, előzeteseit megtekinteni.
-+ **Vendégként** szeretnék filmeket keresni.
-+ **Vendégként** szeretnék regisztrálni az oldalra.
 + **Felhasználóként** szeretnék bejelentkezni az oldalra.
-+ **Felhasználóként** szeretném szerkeszteni a profiladataimat.
-+ **Felhasználóként** szeretném a saját foglalásaim, illetve vásárlásaim megtekinteni.
-+ **Felhasználóként** szeretném értékelni a filmeket.
-+ **Adminisztrátorként** szeretnék új filmeket hozzáadni a műsorlistához, illetve törölni is róla.
++ **Felhasználóként** szeretnék szerkeszteni egy terméket.
++ **Felhasználóként** szeretnék törölni egy terméket.
++ **Felhasználóként** szeretnék keresni egy terméket.
++ **Felhasználóként** szeretnék hozzá adni egy új terméket.
 
 ### Nem funkcionális követelmények:
 + Használhatóság
