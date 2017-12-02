@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Storage} from './storage';
+import {Storage} from '../../model/storage';
 
 @Component({
     selector: 'storage-list',
