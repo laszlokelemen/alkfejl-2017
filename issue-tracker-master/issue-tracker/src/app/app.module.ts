@@ -19,6 +19,7 @@ import { StatsComponent } from './pages/stats/stats.component';
 import {IssueService} from "./services/issue.service";
 import { HelpComponent } from './pages/help/help.component';
 import { ErrorComponent } from './pages/error/error.component';
+import {StoragelistComponent} from './pages/storage/storage-list.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ErrorComponent } from './pages/error/error.component';
     NewIssueComponent,
     StatsComponent,
     HelpComponent,
-    ErrorComponent
+    ErrorComponent,
+    StoragelistComponent
   ],
   imports: [
     BrowserModule,
