@@ -1,14 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+/*import {Component, OnInit} from '@angular/core';
 import {Storage} from '../../model/storage';
 
 @Component({
-    selector: 'storage-list',
+    selector: 'app-storage-list',
     templateUrl: 'app/ts/storage-list.component.html',
-    inputs: ['product']
+    //inputs: ['product']
 })
 
 export class StoragelistComponent {
     onSelect(prod: Storage) {
-        console.log(JSON.stringify(prod))
+        console.log(JSON.stringify(prod));
     }
 }
+*/
