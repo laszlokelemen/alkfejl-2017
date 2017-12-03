@@ -16,6 +16,7 @@ import { StorageListComponent } from './pages/storage/storage-list/storage-list.
 import {MaterialItemsModule} from "./MaterialItemsModule";
 import { MenuComponent } from './components/menu/menu.component';
 import { NewIssueComponent } from './pages/issues/new-issue/new-issue.component';
+import { NewStorageComponent } from './pages/storage/new-storage/new-storage.component';
 import { StatsComponent } from './pages/stats/stats.component';
 import {IssueService} from "./services/issue.service";
 import { HelpComponent } from './pages/help/help.component';
@@ -32,6 +33,7 @@ import { StorageService } from './services/storage.service';
     StorageListComponent,
     MenuComponent,
     NewIssueComponent,
+    NewStorageComponent,
     StatsComponent,
     HelpComponent,
     ErrorComponent
