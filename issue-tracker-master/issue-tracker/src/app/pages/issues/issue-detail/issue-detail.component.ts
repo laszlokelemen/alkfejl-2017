@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Issue} from "../../../model/Issue";
-import {IssueService} from "../../../services/issue.service";
-import {ActivatedRoute, Router} from "@angular/router";
+import {Issue} from '../../../model/Issue';
+import {IssueService} from '../../../services/issue.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-issue-detail',
@@ -19,7 +19,7 @@ export class IssueDetailComponent implements OnInit {
     this.route.params.subscribe(
       params => this.id = params.id,
       err => console.log(err)
-    )
+    );
   }
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class IssueDetailComponent implements OnInit {
       .subscribe(
         issue => this.issue = issue,
         err => console.log(err)
-      )
+      );
   }
 
   updateStatus() {
@@ -35,7 +35,7 @@ export class IssueDetailComponent implements OnInit {
       .subscribe(
         issue => console.log('ok'),
         err => console.log(err)
-      )
+      );
   }
 
   submit() {
@@ -43,7 +43,7 @@ export class IssueDetailComponent implements OnInit {
       .subscribe(
         issue => console.log('ok'),
         err => console.log(err)
-      )
+      );
   }
 
 }

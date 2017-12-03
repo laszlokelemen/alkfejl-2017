@@ -12,7 +12,7 @@ export class Server {
   private static prefix: String = 'api';
 
   static routeTo(route: String) {
-    return `http://${Server.address}:${Server.port}/${Server.prefix}/${route}`
+    return `http://${Server.address}:${Server.port}/${Server.prefix}/${route}`;
   }
 }
 
