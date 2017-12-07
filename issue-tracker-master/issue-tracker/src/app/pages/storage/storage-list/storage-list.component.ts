@@ -27,8 +27,8 @@ export class StorageListComponent {
 }
 
 const data: Storage[] = [
-  new Storage(1, 'fork', 'blue', '12cm', 1200),
-  new Storage(1, 'spoon', 'green', '10cm', 1500)
+  new Storage('fork', 'blue', '12cm', 1200),
+  new Storage('spoon', 'green', '10cm', 1500)
 ];
 
 export class StorageDataSource extends DataSource<any> {

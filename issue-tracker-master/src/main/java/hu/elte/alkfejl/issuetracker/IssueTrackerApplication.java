@@ -28,7 +28,11 @@ public class IssueTrackerApplication extends WebMvcConfigurerAdapter {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**");
+        registry.addMapping("/**").allowedOrigins("http://localhost:4200")
+		.allowedMethods("PUT", "DELETE", "GET", "OPTIONS", "POST")
+                .allowCredentials(true)
+                .allowedHeaders("X-Requested-With, Authorization, Origin, Content-Type, Version")
+                .exposedHeaders("X-Requested-With, Authorization, Origin, Content-Type");  
     }
 
 }

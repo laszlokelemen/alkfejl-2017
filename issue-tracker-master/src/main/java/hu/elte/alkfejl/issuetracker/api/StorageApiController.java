@@ -31,7 +31,7 @@ public class StorageApiController {
         return ResponseEntity.ok(storage);
     }
 
-    @Role({ADMIN, USER})
+  //  @Role({ADMIN, USER})
     @PostMapping
     private ResponseEntity<Storage> create(@RequestBody Storage storage) {
         Storage saved = stoageService.create(storage);

@@ -38,10 +38,11 @@ export class NewStorageComponent implements OnInit {
   }
 
   submit() {
+    // console.log(this.name.value, this.color.value, this.size.value, this.price.value);
     this.storageService.create(new Storage(this.name.value, this.color.value, this.size.value, this.price.value))
       .subscribe(
         res => res,
         err => console.log(err)
-      )
+      );
   }
 }

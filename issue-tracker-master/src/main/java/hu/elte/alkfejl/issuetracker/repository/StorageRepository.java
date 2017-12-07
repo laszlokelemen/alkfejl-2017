@@ -12,6 +12,7 @@ import java.util.List;
  */
 @Repository
 public interface StorageRepository extends CrudRepository<Storage, Integer> {
+    @Override
     List<Storage> findAll();
     //List<Storage> findAll(Depository depository);
 }

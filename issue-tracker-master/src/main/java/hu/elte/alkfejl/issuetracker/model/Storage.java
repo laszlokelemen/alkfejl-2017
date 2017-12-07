@@ -21,12 +21,12 @@ public class Storage extends BaseEntity{
 
     @Column(nullable = false)
     private String name;
-
-    @Column(nullable = false)
-    private String size;
     
     @Column(nullable = false)
     private String color;
+
+    @Column(nullable = false)
+    private String size;
 
     @Column(nullable = false)
     private int price;
@@ -50,20 +50,20 @@ public class Storage extends BaseEntity{
         this.name = name;
     }
     
-    public String getSize() {
-        return size;
-    }
-    
-    public void setSize(String size) {
-        this.size = size;
-    }
-    
     public String getColor() {
         return color;
     }
     
     public void setColor(String color) {
         this.color = color;
+    }
+    
+    public String getSize() {
+        return size;
+    }
+    
+    public void setSize(String size) {
+        this.size = size;
     }
     
     public int getPrice() {

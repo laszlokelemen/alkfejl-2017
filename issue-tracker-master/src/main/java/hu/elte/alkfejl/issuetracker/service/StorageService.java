@@ -21,6 +21,8 @@ public class StorageService {
     @Autowired
     private StorageRepository storageRepository;
 
+    private Storage storage;
+    
     public Iterable<Storage> findAll() {
         return storageRepository.findAll();
     }
@@ -28,8 +30,8 @@ public class StorageService {
 
     public Storage create(Storage product) {
         //category check
-        
         return storageRepository.save(product);
+        
     }
     
     public Optional<Storage> findById(int id) {
