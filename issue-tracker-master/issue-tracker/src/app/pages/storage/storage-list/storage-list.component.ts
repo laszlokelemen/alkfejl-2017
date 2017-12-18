@@ -4,6 +4,7 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import {Storage} from '../../../model/Storage';
 import {StorageService} from '../../../services/storage.service';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-storage-list',
@@ -12,9 +13,10 @@ import {StorageService} from '../../../services/storage.service';
 })
 export class StorageListComponent {
   displayedColumns: String[] = ['name', 'color', 'size', 'price', 'edit'];
-  issues: DataSource<any> = new StorageDataSource(this.storageService);
+  storage: DataSource<any> = new StorageDataSource(this.storageService);
 
-  constructor(private storageService: StorageService) {
+  constructor(private authService: AuthService, private storageService: StorageService) {
+    //this.storage = authService.user;
   }
 
   delete(id: number) {

@@ -4,7 +4,7 @@
     <h2 class="mat-h2">Storage</h2>
     <a mat-raised-button routerLink="/storage/new" class="mat-primary">Add new storage</a>
   
-    <mat-table #table [dataSource]="sxtorage">
+    <mat-table #table [dataSource]="storage">
       <ng-container matColumnDef="name">
         <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.id}}</mat-cell>
