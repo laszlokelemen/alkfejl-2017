@@ -31,7 +31,7 @@ public class StorageApiController {
         return ResponseEntity.ok(storage);
     }
 
-  //  @Role({ADMIN, USER})
+    @Role({ADMIN, USER})
     @PostMapping
     private ResponseEntity<Storage> create(@RequestBody Storage storage) {
         Storage saved = stoageService.create(storage);
@@ -40,8 +40,8 @@ public class StorageApiController {
 
     @Role({ADMIN, USER})
     @GetMapping("/{id}")
-    private ResponseEntity<Storage> read(@PathVariable String id) {
-        Storage read = stoageService.read(Integer.parseInt(id));
+    private ResponseEntity<Storage> read(@PathVariable int id) {
+        Storage read = stoageService.read(id);
         return ResponseEntity.ok(read);
     }
 

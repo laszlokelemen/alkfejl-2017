@@ -16,6 +16,7 @@ export class StorageDetailComponent implements OnInit {
   constructor(private storageService: StorageService,
               private route: ActivatedRoute,
               private router: Router) {
+                console.log("work");
     this.route.params.subscribe(
       params => this.id = params.id,
       err => console.log(err)

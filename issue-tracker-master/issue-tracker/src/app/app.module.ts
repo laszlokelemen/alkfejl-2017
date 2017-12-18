@@ -11,6 +11,7 @@ import {HttpModule} from "@angular/http";
 import { RegisterComponent } from './pages/register/register.component';
 import  {appRoutes} from './routes';
 import { IssueDetailComponent } from './pages/issues/issue-detail/issue-detail.component';
+import { StorageDetailComponent } from './pages/storage/storage-detal/storage-detail.component';
 import { IssueListComponent } from './pages/issues/issue-list/issue-list.component';
 import { StorageListComponent } from './pages/storage/storage-list/storage-list.component';
 import {MaterialItemsModule} from "./MaterialItemsModule";
@@ -29,6 +30,7 @@ import { StorageService } from './services/storage.service';
     LoginComponent,
     RegisterComponent,
     IssueDetailComponent,
+    StorageDetailComponent,
     IssueListComponent,
     StorageListComponent,
     MenuComponent,
