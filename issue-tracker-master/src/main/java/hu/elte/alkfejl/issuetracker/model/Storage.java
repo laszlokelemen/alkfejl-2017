@@ -1,5 +1,6 @@
 package hu.elte.alkfejl.issuetracker.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,6 +32,7 @@ public class Storage extends BaseEntity{
     @Column(nullable = false)
     private int price;
     
+    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "product_category",
@@ -38,7 +40,7 @@ public class Storage extends BaseEntity{
             inverseJoinColumns = @JoinColumn(name = "category_id", referencedColumnName = "id"))
     private List<Categories> categories;
     
-    
+    @JsonIgnore
     @OneToMany(mappedBy="product", cascade={CascadeType.ALL})
     private List<Quantity> quantity;
     

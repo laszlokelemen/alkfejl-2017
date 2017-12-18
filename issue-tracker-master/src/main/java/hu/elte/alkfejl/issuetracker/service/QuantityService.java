@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Collections;
+import java.util.Optional;
 
 /**
  * @author Godzsák Dávid <godzsakdavid@gmail.com>
@@ -27,9 +28,7 @@ public class QuantityService {
     }
 
 
-    public Quantity create(Quantity quantity) {
-        //category check
-        
+    public Quantity create(Quantity quantity) {        
         return quantityRepository.save(quantity);
     }
     
@@ -59,6 +58,10 @@ public class QuantityService {
 
     public Quantity read(int id) {
         return quantityRepository.findOne(id);
+    }
+    
+    public Optional<Quantity> readDepo(int id) {
+        return quantityRepository.findOneByDepository_id(id);
     }
 
    /* public void addMessage(int id, IssueMessage message) {

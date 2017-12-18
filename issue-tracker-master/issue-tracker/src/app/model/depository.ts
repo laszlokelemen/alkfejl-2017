@@ -1,4 +1,4 @@
-export class Category {
+export class Depository {
     id: number;
     address: string;
 

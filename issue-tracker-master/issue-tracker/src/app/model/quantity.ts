@@ -1,4 +1,4 @@
-export class Category {
+export class Quantity {
     id: number;
     quantity: number;
     comment: string;
