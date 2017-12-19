@@ -12,7 +12,7 @@ export class StorageService {
   }
 
   getStorage(): Observable<Storage[]> {
-    console.log('all storage');
+    //console.log('all storage');
     return this.http.get(Server.routeTo(Routes.STORAGE))
       .map(res => res.json());
   }

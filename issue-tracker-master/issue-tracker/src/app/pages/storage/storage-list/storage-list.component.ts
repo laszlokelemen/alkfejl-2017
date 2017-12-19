@@ -36,7 +36,7 @@ const data: Storage[] = [
 export class StorageDataSource extends DataSource<any> {
   constructor(private storageService: StorageService) {
     super();
-          console.log('StorageDataSource constructor');
+          //console.log('StorageDataSource constructor');
   }
 
   connect(): Observable<Storage[]> {
