@@ -50,23 +50,22 @@ alkfejl_magic-storage/
      |  |-data.sql                             
 ```
 ### Végpontok
- - `GET / `
+ - `@ALL|           GET / `
      - főoldal megjelenítése
- - `GET /search`
-    - Keresési paraméterek:
-        - (Értékek: `kód`, `név`, `méret` ,`szín`,`darabszám`)
- - `GET /storage`:
+ - `@ADMIN, USER|   GET /storage`:
     - Készlet megjelenítése 
- - `GET /storage/add`:
+ - `@ALL |          GET /storage/add`:
     - Új elem hozzáadása oldal megjelenítése
- - `PUT /storage/add`:
+ - `@ADMIN, USER|   POST /storage/add`:
     - Egy új elem lementése
- - `GET /storage/edit`:
+ - `@ADMIN, USER|   GET /storage/:id`:
     - Elem módosítás oldal megjelenítése
+ - `@ADMIN, USER|   POST /storage/:id`:
+    - Elem módosításának lementése
  - Felhasználói végpont:
-    - `GET /employee`: Alkalmazotti oldal megjelenítése
-    - `POST /employee/login`: Alkalmazotti oldal bejelentkező oldal megjelenítése
-    - `POST /employee/logout`: Alkalmazotti oldal kijelentkező oldal megjelenítése
+    - `POST /register`: Alkalmazotti oldal megjelenítése
+    - `POST /login`: Alkalmazotti oldal bejelentkező oldal megjelenítése
+    - `POST /logout`: Alkalmazotti oldal kijelentkező oldal megjelenítése
    
 
 
