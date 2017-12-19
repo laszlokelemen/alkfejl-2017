@@ -31,36 +31,49 @@ A projektünk célja, hogy létrehozzunk egy virtuális raktárt.
 + **[JAVA 7]** - Programozási nyelv (szerveroldal)
 + **[Angular 2/4]** - Programozási nyelv (HTML, CSS, SCSS, Typescript) (kliensoldal)
 
+## Szerepkörök
+| Szereplő |  |
+| ------ | ----------- |
+| Látogató   | Böngészheti az oldalt. |
+| Felhasználó | Láthatja a termékeket és mennyiségeket, új terméket vihet fel |
+| Admin    | Láthatja a termékeket és mennyiségeket, új terméket és készletet vihet fel illetve törölheti azokat |
 
 ### Adatbázis terv:
 - ![alt text](https://github.com/laszlokelemen/alkfejl-2017/blob/master/DatabaseBasicModel.PNG)
 
-### Alkalmazott könyvtárstruktúra:
+### Alkalmazott backend könyvtárstruktúra:
 ```
-alkfejl_magic-storage/
+your-storage/
      |-src                                   
-     |  |-hu.elte.alkfejl.magicstorage         
-     |  |  |-api                              
-     |  |  |-controller                        
-     |  |  |-model                            
-     |  |  |-repository                        
-     |  |  |-service                           
+     |  |-hu.elte.alkfejl.yourstorage         
+     |  |  |-api                        //apicontrollerek
+     |  |  |-config                     //login kezelő
+     |  |  |-controller                 //login controller
+     |  |  |-model                      //modellek  
+     |  |  |-repository                 //repositoryk           
+     |  |  |-service                    //szervizek   
      |-resources                               
-     |  |-application.properties               
-     |  |-data.sql                             
+     |  |-application.properties        //adatbázik elérhetőség      
+     |  |-data.sql                      //adatbázik feltöltő      
 ```
 ### Végpontok
  - `@ALL|           GET / `
-     - főoldal megjelenítése
+     - Főoldal megjelenítése
  - `@ADMIN, USER|   GET /storage`:
-    - Készlet megjelenítése 
+    - Termékek megjelenítése 
  - `@ALL |          GET /storage/add`:
     - Új elem hozzáadása oldal megjelenítése
  - `@ADMIN, USER|   POST /storage/add`:
     - Egy új elem lementése
  - `@ADMIN, USER|   GET /storage/:id`:
     - Elem módosítás oldal megjelenítése
- - `@ADMIN, USER|   POST /storage/:id`:
+ - `@ADMIN|   POST /storage/:id`:
+    - Elem módosításának lementése
+  - `@ADMIN, USER|   GET /qantity`:
+    - Készlet megjelenítése 
+ - `@ADMIN, USER|   GET /qantity/:id`:
+    - Elem módosítás oldal megjelenítése
+ - `@ADMIN|   POST /qantity/:id`:
     - Elem módosításának lementése
  - Felhasználói végpont:
     - `POST /register`: Alkalmazotti oldal megjelenítése
@@ -68,7 +81,37 @@ alkfejl_magic-storage/
     - `POST /logout`: Alkalmazotti oldal kijelentkező oldal megjelenítése
    
 
-
+### Alkalmazott frontend könyvtárstruktúra:
+```
+your-storage/
+     |-src                                   
+     |  |-app         
+     |  |  |-components  
+     |  |  |  |-menu  
+     |  |  |-model         
+     |  |  |-pages
+     |  |  |  |-error
+     |  |  |  |-help
+     |  |  |  |-issues
+     |  |  |  |  |-issue-detail
+     |  |  |  |  |-issue-list
+     |  |  |  |  |-new-issue
+     |  |  |  |-login
+     |  |  |  |-quantity
+     |  |  |  |  |-quantity-detail
+     |  |  |  |  |-quantity-list
+     |  |  |  |  |-quantity-issue
+     |  |  |  |-register
+     |  |  |  |-stat
+     |  |  |  |-storage
+     |  |  |  |  |-storage-detal
+     |  |  |  |  |-storage-list
+     |  |  |  |  |-storage-issue
+     |  |  |-service                            
+     |  |  |-utils                           
+     |  |-assets                               
+     |  |-enviroments                          
+```
 
 
 
