@@ -13,6 +13,7 @@ import java.util.Optional;
  */
 @Repository
 public interface QuantityRepository extends CrudRepository<Quantity, Integer> {
-    Optional<Quantity> findOneByDepository_id(int depository);
+    List<Quantity> findOneByDepository_id(int depository);
+    List<Quantity> findOneByProduct_id(int depository);
     //List<Storage> findAll(Depository depository);
 }

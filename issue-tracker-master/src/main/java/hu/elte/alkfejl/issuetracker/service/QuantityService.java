@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -60,7 +61,11 @@ public class QuantityService {
         return quantityRepository.findOne(id);
     }
     
-    public Optional<Quantity> readDepo(int id) {
+    public List<Quantity> readByDepo(int id) {
+        return quantityRepository.findOneByDepository_id(id);
+    }
+    
+    public List<Quantity> readByStorage(int id) {
         return quantityRepository.findOneByDepository_id(id);
     }
 

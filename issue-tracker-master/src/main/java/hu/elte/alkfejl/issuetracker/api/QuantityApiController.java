@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import static hu.elte.alkfejl.issuetracker.model.User.Role.ADMIN;
 import static hu.elte.alkfejl.issuetracker.model.User.Role.USER;
 import hu.elte.alkfejl.issuetracker.service.QuantityService;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * @author Godzsák Dávid <godzsakdavid@gmail.com>
@@ -44,7 +46,14 @@ public class QuantityApiController {
         Quantity read = quantityService.read(Integer.parseInt(id));
         return ResponseEntity.ok(read);
     }
-    
+    /*
+    @Role({ADMIN, USER})
+    @GetMapping("/{id}")
+    private ResponseEntity<List<Quantity>> readByStorage(@PathVariable String id) {
+        List<Quantity> read = quantityService.readByStorage(Integer.parseInt(id));
+        return ResponseEntity.ok(read);
+    }
+    */
     
 /*  TODO
     @Role(ADMIN)

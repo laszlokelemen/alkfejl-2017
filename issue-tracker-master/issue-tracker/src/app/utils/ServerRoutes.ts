@@ -4,6 +4,7 @@ export class Routes {
   static LOGOUT: String = 'user/logout';
   static ISSUES: String = 'issues';
   static STORAGE: String = 'storage';
+  static QUANTITY: String = 'quantity';
 }
 
 export class Server {

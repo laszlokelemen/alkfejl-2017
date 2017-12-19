@@ -1,5 +1,6 @@
 package hu.elte.alkfejl.issuetracker.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -24,11 +25,12 @@ public class Quantity extends BaseEntity {
     @Column(nullable = false)
     private String comment;
     
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Storage product;
     
-    
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "depository_id")
     private Depository depository;

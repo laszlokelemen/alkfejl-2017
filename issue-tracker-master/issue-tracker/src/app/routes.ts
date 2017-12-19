@@ -3,6 +3,7 @@ import {LoginComponent} from "./pages/login/login.component";
 import {RegisterComponent} from "./pages/register/register.component";
 import {IssueListComponent} from "./pages/issues/issue-list/issue-list.component";
 import {StorageListComponent} from "./pages/storage/storage-list/storage-list.component";
+import {QuantityListComponent} from "./pages/quantity/quantity-list/quantity-list.component";                                    
 import {StorageDetailComponent} from "./pages/storage/storage-detal/storage-detail.component";
 import {IssueDetailComponent} from "./pages/issues/issue-detail/issue-detail.component";
 import {NewIssueComponent} from "./pages/issues/new-issue/new-issue.component";
@@ -16,6 +17,7 @@ export const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'issues', component: IssueListComponent},
   {path: 'storage', component: StorageListComponent},
+  {path: 'quantity', component: QuantityListComponent},
   {path: 'issues/new', component: NewIssueComponent},
   {path: 'storage/new', component: NewStorageComponent},
   {path: 'storage/:id', component: StorageDetailComponent},

@@ -14,6 +14,7 @@ import { IssueDetailComponent } from './pages/issues/issue-detail/issue-detail.c
 import { StorageDetailComponent } from './pages/storage/storage-detal/storage-detail.component';
 import { IssueListComponent } from './pages/issues/issue-list/issue-list.component';
 import { StorageListComponent } from './pages/storage/storage-list/storage-list.component';
+import { QuantityListComponent } from "./pages/quantity/quantity-list/quantity-list.component";
 import {MaterialItemsModule} from "./MaterialItemsModule";
 import { MenuComponent } from './components/menu/menu.component';
 import { NewIssueComponent } from './pages/issues/new-issue/new-issue.component';
@@ -23,6 +24,7 @@ import {IssueService} from "./services/issue.service";
 import { HelpComponent } from './pages/help/help.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { StorageService } from './services/storage.service';
+import { QuantityService } from './services/quantity.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { StorageService } from './services/storage.service';
     StorageDetailComponent,
     IssueListComponent,
     StorageListComponent,
+    QuantityListComponent,
     MenuComponent,
     NewIssueComponent,
     NewStorageComponent,
@@ -49,7 +52,7 @@ import { StorageService } from './services/storage.service';
     BrowserAnimationsModule,
     MaterialItemsModule
   ],
-  providers: [AuthService, IssueService, StorageService],
+  providers: [AuthService, IssueService, StorageService, QuantityService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
