@@ -12,7 +12,7 @@ export class QuantityService {
   }
 
   getQuantity(): Observable<Quantity[]> {
-    console.log('all quantity');
+    //console.log('all quantity');
     return this.http.get(Server.routeTo(Routes.QUANTITY))
       .map(res => res.json());
   }
@@ -28,7 +28,7 @@ export class QuantityService {
   }
 
   read(id: number) {
-    console.log(id);
+    //console.log(id);
     return this.http.get(Server.routeTo(Routes.QUANTITY) + '/' + id)
       .map(res => res.json());
   }

@@ -49,7 +49,7 @@ export class QuantityDetailComponent implements OnInit {
     this.quantityService.update(send)
       .subscribe(
         (quantity) => {
-          console.log('ok');
+          //console.log('ok');
           err => console.log(err);
           this.router.navigateByUrl('/quantity');
         }

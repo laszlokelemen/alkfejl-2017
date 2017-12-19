@@ -17,7 +17,7 @@ export class QuantityListComponent {
 
   constructor(private authService: AuthService, private quantityService: QuantityService) {
     //this.quantity = authService.user;
-    console.log('quantity-list-components constuctor');
+    //console.log('quantity-list-components constuctor');
   }
 
   delete(id: number) {
@@ -32,11 +32,11 @@ export class QuantityListComponent {
 export class QuantityDataSource extends DataSource<any> {
   constructor(private quantityService: QuantityService) {
     super();
-        console.log('qunatity data sourse constructor');
+        //console.log('qunatity data sourse constructor');
   }
 
   connect(): Observable<Quantity[]> {
-    console.log('quantity connect');
+    //console.log('quantity connect');
     return this.quantityService.getQuantity();
   }
 

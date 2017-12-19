@@ -41,7 +41,7 @@ export class StorageDataSource extends DataSource<any> {
 
   connect(): Observable<Storage[]> {
     var a = this.storageService.getStorage();
-    console.log(a);
+    //console.log(a);
     return this.storageService.getStorage();
   }
 
