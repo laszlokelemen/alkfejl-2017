@@ -39,7 +39,7 @@ A projektünk célja, hogy létrehozzunk egy virtuális raktárt.
 | Admin    | Láthatja a termékeket és mennyiségeket, új terméket és készletet vihet fel illetve törölheti azokat |
 
 ### Adatbázis terv:
-- ![alt text](https://github.com/laszlokelemen/alkfejl-2017/blob/master/DatabaseBasicModel.PNG)
+- ![alt text](https://github.com/laszlokelemen/alkfejl-2017/blob/master/issue-tracker-master/databaseplan.png)
 
 ### Alkalmazott backend könyvtárstruktúra:
 ```
