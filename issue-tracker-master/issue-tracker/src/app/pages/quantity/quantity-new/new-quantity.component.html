@@ -1,0 +1,26 @@
+<div class="page-body">
+    <h2 class="mat-h2">New quantity</h2>
+    <form [formGroup]="quantityForm" novalidate>
+      <div class="form-control">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Quantity" formControlName="quantity">
+          <mat-error *ngIf="quantity.hasError('required')">
+            Quantity is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      
+      <div class="form-control">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Comment" formControlName="comment">
+          <mat-error *ngIf="comment.hasError('required')">
+            Comment is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>  
+  
+      <button mat-raised-button class="mat-primary" (click)="submit()" [disabled]="!quantityForm.valid">Send</button>
+      <a mat-button class="mat-accent" routerLink="/quantity">Back</a>
+    </form>
+  </div>
+  

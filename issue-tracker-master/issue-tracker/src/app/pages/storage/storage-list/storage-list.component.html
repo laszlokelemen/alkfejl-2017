@@ -28,7 +28,7 @@
       <ng-container matColumnDef="edit">
         <mat-header-cell *matHeaderCellDef> Actions</mat-header-cell>
         <mat-cell *matCellDef="let element">
-          <a mat-button [routerLink]="'/storage/' + element.id">Details</a>
+          <a mat-button [routerLink]="'/storage/' + element.id">Edit</a>
           <button mat-button (click)="delete(element.id)" class="mat-accent">Delete</button>
         </mat-cell>
       </ng-container>

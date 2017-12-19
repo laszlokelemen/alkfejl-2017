@@ -2,33 +2,33 @@
 
 <div class="page-body">
     <h2 class="mat-h2">Quantity</h2>
-    <!--<a mat-raised-button routerLink="/storage/new" class="mat-primary">Add new storage</a>-->
+    <!--<a mat-raised-button routerLink="/quantity/new" class="mat-primary">Add new quantity</a>-->
   
-    <mat-table #table [dataSource]="quantiy">
-      <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
+    <mat-table #table [dataSource]="quantity">
+      <ng-container matColumnDef="comment">
+        <mat-header-cell *matHeaderCellDef> Comment</mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.comment}}</mat-cell>
       </ng-container>
   
-      <ng-container matColumnDef="color">
-        <mat-header-cell *matHeaderCellDef> Color</mat-header-cell>
+      <ng-container matColumnDef="quantity">
+        <mat-header-cell *matHeaderCellDef> Quantity</mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.quantity}}</mat-cell>
       </ng-container>
   
-      <ng-container matColumnDef="size">
-        <mat-header-cell *matHeaderCellDef> Size</mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.depository_id}}</mat-cell>
+      <ng-container matColumnDef="depo id">
+        <mat-header-cell *matHeaderCellDef> Depository address</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.depository.address}}</mat-cell>
       </ng-container>
   
-      <ng-container matColumnDef="price">
-        <mat-header-cell *matHeaderCellDef> Price</mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.product_ip}}</mat-cell>
+      <ng-container matColumnDef="product id">
+        <mat-header-cell *matHeaderCellDef> Product name</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.product.name}}</mat-cell>
       </ng-container>
   
       <ng-container matColumnDef="edit">
         <mat-header-cell *matHeaderCellDef> Actions</mat-header-cell>
         <mat-cell *matCellDef="let element">
-          <a mat-button [routerLink]="'/storage/' + element.id">Details</a>
+          <a mat-button [routerLink]="'/quantity/' + element.id">Details</a>
           <button mat-button (click)="delete(element.id)" class="mat-accent">Delete</button>
         </mat-cell>
       </ng-container>

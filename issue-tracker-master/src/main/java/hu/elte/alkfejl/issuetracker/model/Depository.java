@@ -1,5 +1,6 @@
 package hu.elte.alkfejl.issuetracker.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -35,7 +36,8 @@ public class Depository extends BaseEntity{
     public void setAddress(String address) {
             this.address = address;
     }
-    
+        @JsonIgnore
+
     @OneToMany(mappedBy="depository", cascade={CascadeType.ALL})
     private List<Quantity> quantity;
     

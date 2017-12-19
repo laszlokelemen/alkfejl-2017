@@ -27,18 +27,21 @@ export class StorageListComponent {
       );
   }
 }
-
+/*
 const data: Storage[] = [
   new Storage('fork', 'blue', '12cm', 1200),
   new Storage('spoon', 'green', '10cm', 1500)
 ];
-
+*/
 export class StorageDataSource extends DataSource<any> {
   constructor(private storageService: StorageService) {
     super();
+          console.log('StorageDataSource constructor');
   }
 
   connect(): Observable<Storage[]> {
+    var a = this.storageService.getStorage();
+    console.log(a);
     return this.storageService.getStorage();
   }
 

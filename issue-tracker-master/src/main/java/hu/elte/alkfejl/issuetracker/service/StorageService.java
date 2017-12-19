@@ -40,7 +40,12 @@ public class StorageService {
     
     public Storage update(int id, Storage product) {
         //id filter?
-        return storageRepository.save(product);
+        Storage storage = storageRepository.findOne(id);
+        storage.setColor(product.getColor());
+        storage.setName(product.getName());
+        storage.setPrice(product.getPrice());
+        storage.setSize(product.getSize());
+        return storageRepository.save(storage);
     }
 
 

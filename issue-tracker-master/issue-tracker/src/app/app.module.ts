@@ -19,12 +19,14 @@ import {MaterialItemsModule} from "./MaterialItemsModule";
 import { MenuComponent } from './components/menu/menu.component';
 import { NewIssueComponent } from './pages/issues/new-issue/new-issue.component';
 import { NewStorageComponent } from './pages/storage/new-storage/new-storage.component';
+import {NewQuantityComponent} from "./pages/quantity/quantity-new/new-quantity.component";
 import { StatsComponent } from './pages/stats/stats.component';
 import {IssueService} from "./services/issue.service";
 import { HelpComponent } from './pages/help/help.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { StorageService } from './services/storage.service';
 import { QuantityService } from './services/quantity.service';
+import {QuantityDetailComponent} from "./pages/quantity/quantity-detail/quantity-detail.component";
 
 @NgModule({
   declarations: [
@@ -39,9 +41,12 @@ import { QuantityService } from './services/quantity.service';
     MenuComponent,
     NewIssueComponent,
     NewStorageComponent,
+    NewQuantityComponent,
     StatsComponent,
     HelpComponent,
-    ErrorComponent
+    ErrorComponent,
+    QuantityDetailComponent,
+    NewQuantityComponent
   ],
   imports: [
     BrowserModule,

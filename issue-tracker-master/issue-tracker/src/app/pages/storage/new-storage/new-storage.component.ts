@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Storage} from "../../../model/Storage";
 import {StorageService} from "../../../services/storage.service";
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-new-storage',
@@ -16,7 +17,9 @@ export class NewStorageComponent implements OnInit {
     price: new FormControl('', [Validators.required])
   });
 
-  constructor(private storageService: StorageService) {
+  constructor(private storageService: StorageService,
+              private route: ActivatedRoute,
+              private router: Router) {
 
   }
 
@@ -41,8 +44,11 @@ export class NewStorageComponent implements OnInit {
     // console.log(this.name.value, this.color.value, this.size.value, this.price.value);
     this.storageService.create(new Storage(this.name.value, this.color.value, this.size.value, this.price.value))
       .subscribe(
-        res => res,
-        err => console.log(err)
+        (res) => {
+          res => res;
+          err => console.log(err);
+          this.router.navigateByUrl('/storage');
+        }
       );
   }
 }

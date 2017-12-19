@@ -12,6 +12,7 @@ export class StorageService {
   }
 
   getStorage(): Observable<Storage[]> {
+    console.log('all storage');
     return this.http.get(Server.routeTo(Routes.STORAGE))
       .map(res => res.json());
   }
@@ -27,7 +28,6 @@ export class StorageService {
   }
 
   read(id: number) {
-    console.log(id);
     return this.http.get(Server.routeTo(Routes.STORAGE) + '/' + id)
       .map(res => res.json());
   }

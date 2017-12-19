@@ -38,7 +38,10 @@ public class QuantityService {
         return quantityRepository.save(quantity);
     }
     
-    public Quantity update(Quantity quantity) {
+    public Quantity update(int id, Quantity _quantity) {
+        Quantity quantity = quantityRepository.findOne(id);
+        quantity.setQuantity(_quantity.getQuantity());
+        quantity.setComment(_quantity.getComment());
         return quantityRepository.save(quantity);
     }
 
@@ -60,7 +63,7 @@ public class QuantityService {
     public Quantity read(int id) {
         return quantityRepository.findOne(id);
     }
-    
+   /* 
     public List<Quantity> readByDepo(int id) {
         return quantityRepository.findOneByDepository_id(id);
     }
@@ -68,7 +71,7 @@ public class QuantityService {
     public List<Quantity> readByStorage(int id) {
         return quantityRepository.findOneByDepository_id(id);
     }
-
+*/
    /* public void addMessage(int id, IssueMessage message) {
         Issue issue = issueRepository.findOne(id);
         message.setTimestamp(Timestamp.valueOf(LocalDateTime.now()));

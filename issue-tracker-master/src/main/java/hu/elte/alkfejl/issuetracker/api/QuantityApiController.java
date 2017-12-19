@@ -55,13 +55,12 @@ public class QuantityApiController {
     }
     */
     
-/*  TODO
     @Role(ADMIN)
     @PutMapping("/{id}")
     private ResponseEntity<Quantity> update(@PathVariable int id, @RequestBody Quantity quantity) {
         Quantity updated = quantityService.update(id, quantity);
         return ResponseEntity.ok(updated);
-    }*/
+    }
 
     @Role(ADMIN)
     @DeleteMapping("/{id}")
