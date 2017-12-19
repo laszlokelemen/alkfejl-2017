@@ -14,6 +14,7 @@ import hu.elte.alkfejl.issuetracker.service.CategoryService;
 /**
  * @author Godzsák Dávid <godzsakdavid@gmail.com>
  */
+
 @RestController
 @RequestMapping("/api/category")
 public class CategoryApiController {
