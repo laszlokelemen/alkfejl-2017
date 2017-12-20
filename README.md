@@ -1,5 +1,5 @@
 # alkfejl-2017
-Alkalmazások fejlesztése beadandó - Magic Storage
+Alkalmazások fejlesztése beadandó - Your Storage
 
 A projektünk célja, hogy létrehozzunk egy virtuális raktárt.
 
